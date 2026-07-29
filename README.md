@@ -47,3 +47,17 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/sihle902/BankAccountContract.git
+
+Navigate into the project folder:
+```bash
+cd BankAccountContract
+```
+Run the application:
+```bash
+dotnet run
+```
+## Application Demo
+
+Screenshot showing the BankAccount console application running successfully.
+
+![Bank Account Application](images/bankaccount-demo.png)

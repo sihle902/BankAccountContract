@@ -1,27 +1,38 @@
 # BankAccountContract
 
-A C# console application that demonstrates the Design by Contract principle.
+A C# console application that demonstrates the **Design by Contract (DbC)** principle by implementing a bank account system with preconditions, postconditions, and invariants.
 
-## Features:
+## Project Overview
+
+This project demonstrates how software contracts can be used to ensure that methods behave correctly. The `BankAccount` class applies rules that control how deposits, withdrawals, and account balances are managed.
+
+## Features
 
 - Create a bank account
 - Deposit money
 - Withdraw money
-- Check balance
+- Check account balance
 - Validate account rules
 - Apply Design by Contract principles
 
-## Preconditions:
+## Design by Contract Implementation
+
+### Preconditions
+Conditions that must be true before a method executes:
+
 - Deposit amount must be greater than zero
 - Withdrawal amount must be positive
-- Withdrawal cannot exceed the account balance
+- Withdrawal amount cannot exceed the account balance
 
-## Postconditions:
-- Balance updates after a successful transaction
+### Postconditions
+Conditions that must be true after a method completes:
 
-## Invariants:
+- Account balance updates after a successful transaction
+
+### Invariants
+Rules that must always remain true:
+
 - Account balance cannot become negative
-
 
 ## Technologies
 
@@ -30,11 +41,9 @@ A C# console application that demonstrates the Design by Contract principle.
 - Visual Studio Code
 - Git & GitHub
 
-## Run
+## How to Run
+
+Clone the repository:
 
 ```bash
-dotnet run
-```
-## Application Demo
-
-![Bank Account Application](images/bankaccount-demo.png)
+git clone https://github.com/sihle902/BankAccountContract.git

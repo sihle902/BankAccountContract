@@ -35,3 +35,6 @@ A C# console application that demonstrates the Design by Contract principle.
 ```bash
 dotnet run
 ```
+## Application Demo
+
+![Bank Account Application](images/bankaccount-demo.png)

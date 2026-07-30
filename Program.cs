@@ -4,14 +4,35 @@ class Program
 {
     static void Main(string[] args)
     {
-        BankAccount account = new BankAccount(1000m);
+        Console.WriteLine("===== SELECT ACCOUNT TYPE =====");
+        Console.WriteLine("1. Savings Account");
+        Console.WriteLine("2. Current Account");
+        Console.Write("Choose an account: ");
 
+        string? accountChoice = Console.ReadLine();
+
+        IBankAccount account;
+
+        switch (accountChoice)
+        {
+            case "1":
+                account = new SavingsAccount(1000m);
+                break;
+
+            case "2":
+                account = new CurrentAccount(1000m);
+                break;
+
+            default:
+                Console.WriteLine("Invalid choice. Savings Account selected by default.");
+                account = new SavingsAccount(1000m);
+                break;
+        }
         bool running = true;
-
         while (running)
         {
             Console.WriteLine("\n===== BANK ACCOUNT MENU =====");
-            Console.WriteLine($"Current Balance: R{account.GetBalance()}");
+          Console.WriteLine($"Current Balance: R{account.Balance}");
             Console.WriteLine("1. Deposit");
             Console.WriteLine("2. Withdraw");
             Console.WriteLine("3. Check Balance");
@@ -44,7 +65,7 @@ class Program
                         break;
 
                     case "3":
-                        Console.WriteLine($"Current Balance: R{account.GetBalance()}");
+                        Console.WriteLine($"Current Balance: R{account.Balance}");
                         break;
 
                     case "4":
@@ -53,9 +74,9 @@ class Program
                         break;
 
                    case "5":
-                        account = new BankAccount(1000m);
+                        account = new SavingsAccount(1000m);
                         Console.WriteLine("Account has been restarted.");
-                        Console.WriteLine($"New Balance: R{account.GetBalance()}");
+                        Console.WriteLine($"New Balance: R{account.Balance}");
                         break;
 
                     default:

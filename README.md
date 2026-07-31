@@ -61,3 +61,8 @@ dotnet run
 Screenshot showing the BankAccount console application running successfully.
 
 ![Bank Account Application](images/bankaccount-demo.png)
+
+## Application Screenshots
+
+### Savings Account
+![Savings Account](images/savings-account-menu.png)

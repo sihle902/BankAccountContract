@@ -3,13 +3,25 @@
 class Program
 {
     static void Main(string[] args)
+    
     {
+         bool applicationRunning = true;
+
+        while (applicationRunning)
+        {
         Console.WriteLine("===== SELECT ACCOUNT TYPE =====");
         Console.WriteLine("1. Savings Account");
         Console.WriteLine("2. Current Account");
+        Console.WriteLine("3. Exit");
         Console.Write("Choose an account: ");
 
         string? accountChoice = Console.ReadLine();
+        if (accountChoice == "3")
+{
+    Console.WriteLine("Thank you for using the SG Bank Account App!");
+    applicationRunning = false;
+    break;
+}
 
         IBankAccount account;
 
@@ -70,7 +82,7 @@ class Program
 
                     case "4":
                         running = false;
-                        Console.WriteLine("Thank you for using the SG Bank Account App!");
+                        Console.WriteLine("Returning to account selection...");
                         break;
 
                    case "5":
@@ -94,4 +106,5 @@ class Program
             }
         }
     }
+}
 }
